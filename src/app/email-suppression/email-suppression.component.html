@@ -1,0 +1,54 @@
+<div class="main" style="width: 100%;">
+
+  <div id="top">
+    <p style="color: #FFFFFF; margin-left: 12px;  margin-top: 45px;">
+    </p>
+  </div>
+
+  <div id="main1" (window:resize)="reSize()">
+    <div ibmGrid>
+      <div ibmRow>
+
+        <div ibmCol [columnNumbers]="{'lg':8,'md':0,'sm':0}"><br>
+          <img class="img" style="width: inherit;" src="../../assets/img/unsubscribeme.jpg" alt="">
+        </div>
+
+        <div style="padding-top: 5%;" ibmCol [columnNumbers]="{'lg':8,'md':8,'sm':4}">
+          <div ibmRow>
+            <div ibmCol [columnNumbers]="{'lg':16,'md':8,'sm':4}">
+              <h3><b>My IBM email preference</b></h3><br><br>
+              <hr>
+            </div>
+          </div>
+          <p>Please enter the email address you want to unsubscribe and select Continue to submit this request.</p>
+          <br>
+          <p>
+            <strong>This does not affect any newsletter subscriptions you are currently receiving or any
+              communications from communities you may have joined.</strong>
+          </p>
+          <div ibmRow>
+            <div ibmCol [columnNumbers]="{'lg':16,'md':8,'sm':4}">
+              <br />Asterisks (*) indicate fields required to complete this transaction.<br />
+              <hr>
+            </div>
+          </div>
+
+          <div ibmRow>
+            <div ibmCol [columnNumbers]="{'lg':8,'md':4,'sm':4}">
+              <p class="ibm-rule"><b>Business Contact Information</b></p>
+              <br><br>
+              <legend>Work e-mail address<span style="color: red;">*</span></legend><br>
+              <input ibmText [invalid]="invalid" [formControl]="email" (focus)="removeinvalid()"
+                (blur)="checkEmailStatus()">
+              <br><br> <br><br>
+              <button ibmButton (click)="submitOptout()">Unsubscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ibm-loading *ngIf="isLoading" [isActive]="isLoading" size="sm" [overlay]="overlay">
+  </ibm-loading>
+</div>

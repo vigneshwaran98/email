@@ -1,0 +1,18 @@
+#main{
+    background-image: url(../../assets/img/unsubscribeme.jpg);
+    opacity: 0.2;
+    background-repeat: no-repeat;
+    background-size: inherit;
+}
+#main1{
+    background-color: #171717;
+}
+.img{
+    min-height: 95%;
+    height: 85vh;
+}
+@media only screen and (max-width: 1024px) and (min-width: 0px){
+	.img{
+        height: 100%;
+    }
+}

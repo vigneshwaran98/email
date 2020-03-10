@@ -1,0 +1,33 @@
+<div class="main" style="width: 100%;">
+
+  <div id="top">
+    <p style="color: #FFFFFF; margin-left: 12px;  margin-top: 45px;">
+    </p>
+  </div>
+
+  <div id="main1" (window:resize)="reSize()">
+    <div ibmGrid>
+      <div ibmRow>
+
+        <div ibmCol [columnNumbers]="{'lg':8,'md':0,'sm':0}"><br>
+          <img class="img" style="width: inherit;" src="../../assets/img/unsubscribeme.jpg" alt="">
+        </div>
+
+        <div style="padding-top: 5%;" ibmCol [columnNumbers]="{'lg':8,'md':8,'sm':4}">
+          <div ibmRow>
+            <div ibmCol [columnNumbers]="{'lg':16,'md':8,'sm':4}">
+              <h3><b>My IBM email preference</b></h3><br><br>
+              <hr>
+            </div>
+          </div>
+          <br>
+          <h4>
+            <p>Thank You</p>
+            <br>
+            <p>Your request for unsubscribing the emails is being processed</p>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
